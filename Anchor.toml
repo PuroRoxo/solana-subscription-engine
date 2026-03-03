@@ -1,0 +1,22 @@
+[features]
+seeds = false
+skip-lint = false
+
+[programs.devnet]
+subscription_billing = "Sub1scr1pt1onB1ll1ngSyst3mOnCha1nPr0gram11"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+
+[test.genesis]
+url = "https://api.devnet.solana.com"
+
+[test.validator]
+url = "https://api.devnet.solana.com"
