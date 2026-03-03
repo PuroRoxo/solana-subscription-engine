@@ -1,0 +1,24 @@
+[package]
+name = "subscription-billing"
+version = "0.1.0"
+description = "On-chain subscription billing system with NFT proof-of-access"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "subscription_billing"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+billing-tests = []
+nft-tests = []
+
+[dependencies]
+anchor-lang = "0.29.0"
+anchor-spl = "0.29.0"
+mpl-token-metadata = "3.2.0"
+solana-program = "~1.17.0"
+solana-security-txt = "1.1.1"
